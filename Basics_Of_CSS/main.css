@@ -1,3 +1,20 @@
-section {
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+#product-overview {
     background: #ff1b68;
+}
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Exo 2", sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
 }
