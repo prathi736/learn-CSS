@@ -1,0 +1,28 @@
+body{
+    font-family: sans-serif;
+}
+
+#assignment-instructions {
+    font-family: sans-serif;
+    color: #0118D8;
+}
+/* Better to use id selector than element selector */
+
+.second-li {
+    color: #008000;
+}
+
+code {
+    font-family: monospace;
+    color: #ff0000;
+}
+
+li + li {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+ol > li {
+    background-color: #000000;
+    color: #ffffff;
+}
