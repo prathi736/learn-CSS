@@ -33,6 +33,12 @@ h1 {
     font-family: sans-serif;
 }
 
+.plan_list {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
 .plan {
     background: #B5FCCD;
     text-align: center;
