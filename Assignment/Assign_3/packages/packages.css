@@ -4,27 +4,25 @@ main {
 
 .background {
     background: url("../images/plans-background.jpg");
-    position: fixed;
     width: 100%;
     height: 100%;
+    position: fixed;
     z-index: -1;
 }
 
 .package {
     width: 80%;
     margin: 16px 0;
-    border: 5px solid #023a21;
+    border: 4px solid #0e4f1f;
     border-left: none;
     position: relative;
 }
 
 .package:hover,
 .package:active {
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    border-color: #FF0B55;
-    /* border-color: #FF0B55 !important; */
-    /* try to use important in rare cases
-    because it breaks specificity of CSS */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color: #ff5454;
+    /* border-color: #ff5454 !important; */
 }
 
 .package a {
@@ -34,27 +32,27 @@ main {
     padding: 32px;
 }
 
-.package_badge {
+.package__badge {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 10px;
-    font-size: 10px;
-    color: #ffffff;
-    background: #FF0B55;
+    margin: 20px;
+    font-size: 12px;
+    color: white;
+    background: #ff5454;
     padding: 8px;
 }
 
-.package_subtitle {
+.package__subtitle {
     color: #979797;
 }
 
-.package_info {
-    font-size: 20px;
+.package__info {
     padding: 16px;
-    border: 1px solid #023a21;
-    color: #023a21;
-    background: #ffffff;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background: white;
 }
 
 .clearfix {
@@ -68,26 +66,24 @@ main {
 #free {
     background: rgba(234, 252, 237, 0.95);
     float: right;
-    /* float is mostly used to algin images around text 
-    but not for only text or elements*/
     border-right: none;
-    border-left: 5px solid #023a21;
+    border-left: 4px solid #0e4f1f;
     text-align: right;
 }
 
 #free:hover,
 #free:active {
-    border-left-color: #FF0B55;
+    border-left-color: #ff5454;
 }
 
 #premium {
     background: rgba(14, 79, 31, 0.95);
 }
 
-#premium .package_title {
-    color: #ffffff;
+#premium .package__title {
+    color: white;
 }
 
-#premium .package_subtitle {
-    color: #bbbbbb;
+#premium .package__subtitle {
+    color: #bbb;
 }
