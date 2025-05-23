@@ -129,6 +129,54 @@ h1 {
     text-align: center;
     font-weight: bold;
     color: #ffffff;
-    font-size: 20px;
-    
+    font-size: 1.2rem;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal_title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal_actions {
+    text-align: center;
+}
+
+.modal_action {
+    border: 1px solid #023a21;
+    background: #023a21;
+    text-decoration: none;
+    color: #ffffff;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal_action :hover,
+.modal_action :active {
+    background: #2ddf5c;
+    border-color: #2ddf5c ;
+}
+
+.modal_action--negative {
+    background: #FF0B55;
+    border-color: #FF0B55;
+}
+
+.modal_action--negative:hover,
+.modal_action--negative:active {
+    background: #EC5228;
+    border-color: #EC5228;
 }
