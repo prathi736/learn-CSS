@@ -8,15 +8,17 @@ main {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
 }
 
 .package {
     width: 80%;
-    margin: 16px 0;
+    margin: 24px 0;
     border: 5px solid #023a21;
     border-left: none;
     position: relative;
+    z-index: -1;
+
 }
 
 .package:hover,

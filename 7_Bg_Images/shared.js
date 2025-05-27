@@ -38,8 +38,9 @@ for (var i=0; i<selectPlanButtons.length; i++) {
 function closeModal() {
     // modal.style.display = 'none';
     // backdrop.style.display = 'none';
-
-    modal.classList.remove('open');
+    if(modal) {
+        modal.classList.remove('open');
+    }
     backdrop.classList.remove('open');
 };
 
@@ -49,7 +50,9 @@ backdrop.addEventListener('click', function(){
     closeModal();
 });
 
-modalNoBtn.addEventListener('click', closeModal);
+if (modalNoBtn){
+    modalNoBtn.addEventListener('click', closeModal);
+}
 
 toggleBtn.addEventListener('click', function(){
     // mobNav.style.display = 'block';
