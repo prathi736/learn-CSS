@@ -17,10 +17,6 @@
     z-index: -1;
 }
 
-.section-title {
-    color: #2ddf5c;
-    text-align: center;
-}
 
 #product-overview  h1 {
     color: white;
@@ -28,11 +24,17 @@
     position: absolute; 
     left: 3%;
     bottom: 5%; 
+    font-size: 1.6rem;
     /* margin: 0;*/
 }
 
 h1 {
     font-family: sans-serif;
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
 }
 
 .plan_list {
@@ -180,4 +182,27 @@ h1 {
 .modal_action--negative:active {
     background: #EC5228;
     border-color: #EC5228;
+}
+
+/* Media Queries: At last so that code can be structured */
+@media (min-width: 40rem) {
+    #product-overview {
+        height: 40vh;
+        background-position: 60% 15%;
+    }
+
+    #product-overview  h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 60rem) {
+    #product-overview {
+        height: 50vh;
+        background-position: 60% 15%;
+    }
+
+    #product-overview  h1 {
+        font-size: 5rem;
+    }
 }
