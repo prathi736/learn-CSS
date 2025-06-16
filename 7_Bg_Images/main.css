@@ -11,7 +11,7 @@
     width: 100vw;
     height: 33vh;
     padding: 10px;
-    margin-top: 3.1rem;
+    /* margin-top: 2.7rem; */
     /* border: 6px dashed red; */
     position: relative;
     z-index: -1;
@@ -170,11 +170,11 @@ h1 {
 }
 
 /* Media Queries: At last so that code can be structured */
-@media (min-width: 40rem) {
+@media (min-width: 40rem) and (min-height: 40rem) {
     #product-overview {
         height: 40vh;
         background-position: 60% 15%;
-        margin-top: 4.5rem;
+        margin-top: 4rem;
     }
 
     #product-overview  h1 {
