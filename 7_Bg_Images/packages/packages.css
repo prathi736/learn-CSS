@@ -58,6 +58,10 @@ main {
     border: 1px solid #023a21;
     color: #023a21;
     background: #ffffff;
+    /* font shorthand */
+    /* font: 400 20px "Roboto"; */
+    /* font-style font-variant font-weight font-size/line-height font-family */
+    /* atleast font-size font-family must be there to use font shorthand */
 }
 
 .clearfix {
