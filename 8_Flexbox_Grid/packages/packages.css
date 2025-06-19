@@ -1,0 +1,124 @@
+main {
+    padding-top: 32px;
+}
+
+.background {
+    background: url("../images/plans-background.jpg") center/cover;
+    filter: grayscale(60%);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+.package {
+    width: 80%;
+    margin: 24px 0;
+    border: 5px solid #023a21;
+    border-left: none;
+    position: relative;
+    z-index: -1;
+
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    border-color: #FF0B55;
+    /* border-color: #FF0B55 !important; */
+    /* try to use important in rare cases
+    because it breaks specificity of CSS */
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+.package_badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 10px;
+    color: #ffffff;
+    background: #FF0B55;
+    padding: 8px;
+}
+
+.package_subtitle {
+    color: #979797;
+}
+
+.package_info {
+    font-size: 20px;
+    padding: 16px;
+    border: 1px solid #023a21;
+    color: #023a21;
+    background: #ffffff;
+    /* font shorthand */
+    /* font: 400 20px "Roboto"; */
+    /* font-style font-variant font-weight font-size/line-height font-family */
+    /* atleast font-size font-family must be there to use font shorthand */
+}
+
+.clearfix {
+    clear: both;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    float: right;
+    /* float is mostly used to algin images around text 
+    but not for only text or elements*/
+    border-right: none;
+    border-left: 5px solid #023a21;
+    text-align: right;
+}
+
+#free:hover,
+#free:active {
+    border-left-color: #FF0B55;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package_title {
+    color: #ffffff;
+}
+
+#premium .package_subtitle {
+    color: #bbbbbb;
+}
+
+/* Media Queries */
+@media (min-width: 40rem) {
+  main {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  .package {
+    border-left: 5px solid #023a21;
+  }
+
+  #free {
+    border-right: 5px solid #023a21;
+  }
+
+  #free:hover,
+  #free:active {
+    border-right-color: #FF0B55;
+  }
+}
