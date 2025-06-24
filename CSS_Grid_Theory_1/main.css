@@ -1,0 +1,91 @@
+.container {
+    margin: 20px;
+    display: grid;
+    height: 800px;
+    /* width: 800px; */
+    /* grid-template-columns: 200px 1fr 30% 1fr; */
+    /* Column Line Names */
+    /* Automatic start and end of grid columns */
+    grid-template-columns: [hd-start] repeat(4, [col-start] 20% [col-end]) [hd-end];
+    /* grid-template-rows: 4rem auto; */
+    grid-template-rows: [hd-start] 4rem [hd-end row-2-start] minmax(50px, 20rem) [row-2-end row-3-start] 100px [row-3-end];
+    /* Way to apply gap between columns and rows in grid */
+    /* column-gap: 20px;
+    row-gap: 15px; */
+    /* Shorthand to apply gaps between columns and rows in grid */
+    /* gap: 20px 15px; */
+    /* if only one value is given, same value is applied to both rows and columns */
+    gap: 20px;
+    /* gap: column-gap row-gap */
+    /* Giving grid cell name */
+    /* grid-template-areas: "header header header header"
+                          "side side main main"  
+                          "footer footer footer footer"; */
+    /* Also use this way as well when cell name is not given */
+    grid-template-areas: "header header header header"
+                          ". side main main"  
+                          "footer footer footer footer";
+    /* Align all items along rows (horizontally) */
+    justify-items: stretch;
+    /* Align all items along columns (vertically) */
+    align-items: stretch;
+
+    /* Align entire grid on x-axis */
+    /* justify-content: stretch; */
+    /* Align entire grid on y-axis */
+    /* align-content: stretch; */
+}
+
+@media (max-width: 40rem) {
+    .container {
+        grid-template-rows: [hd-start] 4rem [hd-end row-2-start] minmax(50px, 20rem) [row-2-end row-3-start] 150px [row-3-end row-4-start] 100px [row-4-end];
+        grid-template-areas: "header header header header"
+                             "main main main main" 
+                             "side side side side" 
+                             "footer footer footer footer";
+    }
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    /* grid-column:  col-start 2 / col-end 2; */
+    grid-area: side;
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    /* grid-row-start: 2; */
+    /* grid-row-start: row-2-start;
+    grid-row-end: span 1; */
+    /* shorthand for grid-row and grid-column */
+    /* grid-column: 1/-1; */
+    /* grid-row: row-2-start/span 1; */
+    grid-area: main;
+    z-index: 1; /*Element 2 comes above element 3*/
+
+    /* Align individual items on x-axis */
+    /* justify-self: center; */
+    /* Align individual items on y-axis */
+    /* align-self: center; */
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /* grid-column-start: 2; */
+    /* grid-column-end: 5; */
+    /* grid-column-end: span 3;
+    grid-row-start: row-1-start;
+    grid-row-end: row-2-end; */
+    /* shorthand for grid-row and grid-column in one thing i.e. grid-area */
+    /* grid-area: row-1-start / 2 / row-2-end / span 3; */
+    /* grid-area: grid-row-start/ grid-column-start / grid-row-end / grid-column-end; */
+    /* using grid cell name for element to capture the cell area in the grid */
+    grid-area: hd;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area: footer;
+}
