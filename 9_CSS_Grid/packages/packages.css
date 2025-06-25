@@ -18,7 +18,7 @@ main {
     border-left: none;
     position: relative;
     z-index: -1;
-
+    overflow: hidden;
 }
 
 .package:hover,
@@ -46,6 +46,13 @@ main {
     color: #ffffff;
     background: #FF0B55;
     padding: 8px;
+    /*2D Transform */
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    /*2D Transform Shorthand */
+    transform: rotate(45deg) translate(3.5rem, -1rem);
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
 }
 
 .package_subtitle {
