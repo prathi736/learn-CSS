@@ -124,6 +124,10 @@ main {
     border-bottom: 3px solid #ffffff;
 }
 
+.main-nav_item-cta {
+    animation: wiggle 200ms 2s 10 ease-out;
+}
+
 .main-nav_item-cta a,
 .mobile-nav_item-cta a {
     color: #ffffff;
@@ -172,7 +176,8 @@ main {
 }
 
 .mobile-nav {
-    display: none;
+    transform: translateX(-100%);
+    /* display: none; */
     position: fixed;
     z-index: 101;
     top: 0;
@@ -180,6 +185,7 @@ main {
     background: #ffffff;
     width: 80%;
     height: 100vh;
+    transition: transform 400ms ease-out;
 }
 
 .mobile-nav_items {
@@ -260,5 +266,25 @@ main {
     .main-footer_link {
         display: inline-block;
         margin: 0 1rem;
+    }
+}
+
+@keyframes wiggle {
+    /* starting point */
+    /* from {
+        transform: rotateZ(0deg);
+    } */
+    /* ending point */
+    /* to {
+        transform: rotateZ(20deg);
+    } */
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateZ(10deg);
     }
 }
